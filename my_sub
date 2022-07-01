@@ -1,0 +1,4 @@
+A = float(input('give me a number: '))
+B = float(input('Now, lets subtract with another number: '))
+print(f'the answer is {A - B}')
+

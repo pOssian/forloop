@@ -1,0 +1,72 @@
+'''
+Tuple:
+1.
+a. Create 3 variables var_1, var_2 and var_3 giving them
+the values 1, 2 and 3 respectively using only a single
+line of code in python.
+'''
+from itertools import count
+
+
+var_1, var_2, var_3 = 1, 2, 3
+print(var_1, var_2, var_3)
+
+'''
+b. Change the value of var_1 and var_2 such that
+var_1= var_2 and var_2= var_1. print the values to verify that now var_1=2 and var_2=1.
+(hint: you might need temporary variables)
+'''
+var_10 = var_2
+var_2 = var_1
+var_1 = var_10
+print(var_1, var_2)
+'''
+c. In most programming languages you need temporary variables for handling variables “switches” such as in b, but python offers a way to do this without!
+try changing the code in b to
+var_1, var_2 = var_2, var_1
+and verify that this method also work.
+'''
+var_1, var_2 = var_2, var_1
+
+'''
+2. Ash Ketchum has been out capturing Pokémon again. He
+first got a Pikachu, then Pidgey, then Abra, then Pidgey, then Eevee then Pidgey
+a. Make a tuple called “captured”, with the captured Pokémon 
+(make sure to keep the order they were captured in)
+'''
+captured = 'Pikachu', 'Pidgey', 'Abra', 'Pidgey', 'Eevee', 'Pidgey'
+
+'''
+b. Would it have been favorable to use a list instead of tuple in this case? 
+    What are the pros and cons?
+    -- Svaret kan inte ändras som en Tuple. Bra för historiken behålls, 
+    men kan inte ändra för att sortera listan på andra sätt
+'''
+
+'''
+c. Ash’s memory is not as it used to be, he is wondering if there might be 
+multiple pidgeys from the captured tuple. Use the count method and print the 
+number of pidgeys in the list.
+'''
+captured.count('Pidgey')
+
+'''
+SET
+
+d. Since Ash’s memory is going bad, Help him and create a program that takes a 
+user input (using the python input operator), where the user can type a Pokémon name 
+and then the program should print out if the Pokémon is already in the captured tuple or not.
+also print the total number of Pokémon in the captured tuple, 
+as well as the number of unique Pokémon.
+'''
+
+
+captured = 'Pikachu', 'Pidgey', 'Abra', 'Pidgey', 'Eevee', 'Pidgey'
+
+pokemon = input('Pokemon name?: ')
+
+if pokemon in captured:
+    print(captured.count(pokemon))
+    print(captured.count)
+else :
+    print('No such pokemon in the list.')
